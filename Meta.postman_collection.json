@@ -1,0 +1,95 @@
+{
+	"id": "db494f75-3f87-d94e-6fd6-c2f6d8b7b31a",
+	"name": "Meta",
+	"description": "",
+	"order": [
+		"3bb26e90-62db-9ae4-48fd-9d5a25e1199c",
+		"95ea9ccf-3bd2-ee7d-3763-5c49905a7b3a",
+		"c89a418f-b558-e7d5-1c54-f8fb63b0ad2c"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1600778400283,
+	"owner": "2728741",
+	"public": false,
+	"requests": [
+		{
+			"id": "3bb26e90-62db-9ae4-48fd-9d5a25e1199c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8088/api1/taxajuros",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1600903615912,
+			"name": "Retorna Taxa de Juros",
+			"description": "",
+			"collectionId": "db494f75-3f87-d94e-6fd6-c2f6d8b7b31a",
+			"responses": []
+		},
+		{
+			"id": "95ea9ccf-3bd2-ee7d-3763-5c49905a7b3a",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8089/api2/showmethecode",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1600903609676,
+			"name": "Retorna Url do Repositorio GitHub",
+			"description": "",
+			"collectionId": "db494f75-3f87-d94e-6fd6-c2f6d8b7b31a",
+			"responses": []
+		},
+		{
+			"id": "c89a418f-b558-e7d5-1c54-f8fb63b0ad2c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:5002/api2/calculajuros?valorinicial=100&tempo=5",
+			"queryParams": [
+				{
+					"key": "valorinicial",
+					"value": "100",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "tempo",
+					"value": "5",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1600903674074,
+			"name": "Calcular Juros",
+			"description": "",
+			"collectionId": "db494f75-3f87-d94e-6fd6-c2f6d8b7b31a",
+			"responses": []
+		}
+	]
+}
