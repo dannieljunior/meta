@@ -1,95 +1,119 @@
 {
-	"id": "db494f75-3f87-d94e-6fd6-c2f6d8b7b31a",
-	"name": "Meta",
-	"description": "",
-	"order": [
-		"3bb26e90-62db-9ae4-48fd-9d5a25e1199c",
-		"95ea9ccf-3bd2-ee7d-3763-5c49905a7b3a",
-		"c89a418f-b558-e7d5-1c54-f8fb63b0ad2c"
-	],
-	"folders": [],
-	"folders_order": [],
-	"timestamp": 1600778400283,
-	"owner": "2728741",
-	"public": false,
-	"requests": [
+	"info": {
+		"_postman_id": "b3b27409-f87e-422e-9bce-9eb60f3c4b00",
+		"name": "Meta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
 		{
-			"id": "3bb26e90-62db-9ae4-48fd-9d5a25e1199c",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:8088/api1/taxajuros",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1600903615912,
 			"name": "Retorna Taxa de Juros",
-			"description": "",
-			"collectionId": "db494f75-3f87-d94e-6fd6-c2f6d8b7b31a",
-			"responses": []
-		},
-		{
-			"id": "95ea9ccf-3bd2-ee7d-3763-5c49905a7b3a",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:8089/api2/showmethecode",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1600903609676,
-			"name": "Retorna Url do Repositorio GitHub",
-			"description": "",
-			"collectionId": "db494f75-3f87-d94e-6fd6-c2f6d8b7b31a",
-			"responses": []
-		},
-		{
-			"id": "c89a418f-b558-e7d5-1c54-f8fb63b0ad2c",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:5002/api2/calculajuros?valorinicial=100&tempo=5",
-			"queryParams": [
-				{
-					"key": "valorinicial",
-					"value": "100",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				},
-				{
-					"key": "tempo",
-					"value": "5",
-					"equals": true,
-					"description": "",
-					"enabled": true
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:{{porta_api1}}/api1/taxajuros",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{porta_api1}}",
+					"path": [
+						"api1",
+						"taxajuros"
+					]
 				}
-			],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1600903674074,
+			},
+			"response": []
+		},
+		{
+			"name": "Retorna Url do Repositorio GitHub",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:{{porta_api2}}/api2/showmethecode",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{porta_api2}}",
+					"path": [
+						"api2",
+						"showmethecode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Calcular Juros",
-			"description": "",
-			"collectionId": "db494f75-3f87-d94e-6fd6-c2f6d8b7b31a",
-			"responses": []
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:{{porta_api2}}/api2/calculajuros?valorinicial=100&tempo=5",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{porta_api2}}",
+					"path": [
+						"api2",
+						"calculajuros"
+					],
+					"query": [
+						{
+							"key": "valorinicial",
+							"value": "100"
+						},
+						{
+							"key": "tempo",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
 		}
-	]
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "52134270-280a-40a1-9453-2a4475e66a4b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "85a260b8-39c3-49cf-8261-b5ac04c7daf1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "431429f8-92be-4757-b8c0-054ebfe098fb",
+			"key": "host",
+			"value": "localhost"
+		},
+		{
+			"id": "9ce52c3a-e3b1-4a72-afb7-b0eef8a8fa7d",
+			"key": "porta_api1",
+			"value": "8088"
+		},
+		{
+			"id": "54a70e89-02b2-4449-a51b-ce3c528a04f2",
+			"key": "porta_api2",
+			"value": "8089"
+		}
+	],
+	"protocolProfileBehavior": {}
 }
