@@ -18,8 +18,6 @@ services:
       dockerfile: Dockerfile
     ports:
         - "0.0.0.0:8089:80"
-    environment:
-    - ASPNET_ENVIRONMENT=Docker
     depends_on:
       - apione
     networks:
